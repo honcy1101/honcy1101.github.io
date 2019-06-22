@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="删除文件及目录  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。">
+<meta name="description" content="**删除文件及目录**   最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 <meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="删表杂记">
-<meta property="og:url" content="http://yoursite.com/2016/02/22/删表杂记/index.html">
+<meta property="og:title" content="删除杂记">
+<meta property="og:url" content="http://yoursite.com/2016/02/22/删除杂记/index.html">
 <meta property="og:site_name" content="Echo&#39;s NotePad">
-<meta property="og:description" content="删除文件及目录  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。">
+<meta property="og:description" content="**删除文件及目录**   最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-22T04:50:28.198Z">
+<meta property="og:updated_time" content="2019-06-22T04:54:10.583Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="删表杂记">
-<meta name="twitter:description" content="删除文件及目录  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。">
+<meta name="twitter:title" content="删除杂记">
+<meta name="twitter:description" content="**删除文件及目录**   最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/02/22/删表杂记/">
+  <link rel="canonical" href="http://yoursite.com/2016/02/22/删除杂记/">
 
 
 
 
 
-  <title>删表杂记 | Echo's NotePad</title>
+  <title>删除杂记 | Echo's NotePad</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/22/删表杂记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/22/删除杂记/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Echo Chen">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">删表杂记</h1>
+          <h1 class="post-title" itemprop="name headline">删除杂记</h1>
         
 
         <div class="post-meta">
@@ -333,8 +333,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/02/22/删表杂记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/02/22/删表杂记/" itemprop="commentCount"></span>
+                <a href="/2016/02/22/删除杂记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/02/22/删除杂记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -342,7 +342,7 @@
 
           
           
-             <span id="/2016/02/22/删表杂记/" class="leancloud_visitors" data-flag-title="删表杂记">
+             <span id="/2016/02/22/删除杂记/" class="leancloud_visitors" data-flag-title="删除杂记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -373,7 +373,8 @@
       
 
       
-        <p>   <strong>删除文件及目录</strong><br>  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。<br><a id="more"></a><br>系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：<br><strong>一、依据inode删除相应的目录（ls -li * 查询出inode）</strong></p>
+        <pre><code>**删除文件及目录**
+</code></pre><p>  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。<br>系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：<br><a id="more"></a><br><strong>一、依据inode删除相应的目录（ls -li * 查询出inode）</strong></p>
 <blockquote>
 <p>1.find  dirname  -inum  inode  -exec rm -rf {} \;<br>2.find  dirname  -inum  inode  -delete<br>3.find  dirname  -inum  inode |xargs -rf</p>
 </blockquote>
