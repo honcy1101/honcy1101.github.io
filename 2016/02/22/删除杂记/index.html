@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="*删除文件及目录*   最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
+<meta name="description" content="删除文件及目录  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 <meta name="keywords" content="系统维护">
 <meta property="og:type" content="article">
 <meta property="og:title" content="删除杂记">
 <meta property="og:url" content="http://yoursite.com/2016/02/22/删除杂记/index.html">
 <meta property="og:site_name" content="Echo&#39;s NotePad">
-<meta property="og:description" content="*删除文件及目录*   最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
+<meta property="og:description" content="删除文件及目录  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-22T04:58:37.185Z">
+<meta property="og:updated_time" content="2019-06-23T12:14:40.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="删除杂记">
-<meta name="twitter:description" content="*删除文件及目录*   最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
+<meta name="twitter:description" content="删除文件及目录  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 
 
 
@@ -373,8 +373,7 @@
       
 
       
-        <pre><code>*删除文件及目录*
-</code></pre><p>  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。<br>系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：<br><a id="more"></a><br><strong>一、依据inode删除相应的目录（ls -li * 查询出inode）</strong></p>
+        <h1 id="删除文件及目录"><a href="#删除文件及目录" class="headerlink" title="删除文件及目录"></a>删除文件及目录</h1><p>  最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。<br>系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：<br><a id="more"></a><br><strong>一、依据inode删除相应的目录（ls -li * 查询出inode）</strong></p>
 <blockquote>
 <p>1.find  dirname  -inum  inode  -exec rm -rf {} \;<br>2.find  dirname  -inum  inode  -delete<br>3.find  dirname  -inum  inode |xargs -rf</p>
 </blockquote>
@@ -383,7 +382,7 @@
 <p>rm -rf ./-R</p>
 </blockquote>
 <p>  看了上面两大类操作，虽然都能达到目的，但显然第二种是最言简意赅，最有效率的的！我们<br>之所以刚开始没有删除，就是平时没有养成一个良好的操作习惯。至于为何没有删除，显然是系统<br>无法识别，很自然的把它当作命令参数，而加上./系统立马能判定它为非系统参数。对于删除操作<br>，是一个高危操作，任何删除操作，我们应该养成良好的习惯，在删除文件前加上“./”，以防不小<br>心误删除大量无关文件，避免酿成不可预知的损失。</p>
-
+<table><br>    <tr><br>        <td>邮箱名</td><td>密码</td><td>总数</td><br>    </tr><br></table>
       
     </div>
     
@@ -494,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -555,6 +563,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#删除文件及目录"><span class="nav-number">1.</span> <span class="nav-text">删除文件及目录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
