@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="&amp;lt;center,size=32&amp;gt;删除文件及目录&amp;amp;#8195最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
+<meta name="description" content="删除文件及目录        最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 <meta name="keywords" content="系统维护">
 <meta property="og:type" content="article">
 <meta property="og:title" content="删除杂记">
 <meta property="og:url" content="http://yoursite.com/2016/02/22/删除杂记/index.html">
 <meta property="og:site_name" content="Echo&#39;s NotePad">
-<meta property="og:description" content="&amp;lt;center,size=32&amp;gt;删除文件及目录&amp;amp;#8195最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
+<meta property="og:description" content="删除文件及目录        最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-23T12:31:24.010Z">
+<meta property="og:updated_time" content="2019-06-23T12:33:32.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="删除杂记">
-<meta name="twitter:description" content="&amp;lt;center,size=32&amp;gt;删除文件及目录&amp;amp;#8195最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
+<meta name="twitter:description" content="删除文件及目录        最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：">
 
 
 
@@ -373,7 +373,7 @@
       
 
       
-        <p>&lt;center,size=32&gt;删除文件及目录<br>&amp;#8195最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。<br>系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：<br><a id="more"></a><br><strong>一、依据inode删除相应的目录（ls -li * 查询出inode）</strong></p>
+        <p><center>删除文件及目录</center><br>        最近一位同仁在服务器里面新建了一个不规范命名的目录“-R”，一时怎么删也删不了。<br>系统会默认-R为系统的一个命令参数。经研究，有如下方法可供参考：<br><a id="more"></a><br><strong>一、依据inode删除相应的目录（ls -li * 查询出inode）</strong></p>
 <blockquote>
 <p>1.find  dirname  -inum  inode  -exec rm -rf {} \;<br>2.find  dirname  -inum  inode  -delete<br>3.find  dirname  -inum  inode |xargs -rf</p>
 </blockquote>
@@ -381,7 +381,8 @@
 <blockquote>
 <p>rm -rf ./-R</p>
 </blockquote>
-<p>&amp;#8195看了上面两大类操作，虽然都能达到目的，但显然第二种是最言简意赅，最有效率的的！我们<br>之所以刚开始没有删除，就是平时没有养成一个良好的操作习惯。至于为何没有删除，显然是系统<br>无法识别，很自然的把它当作命令参数，而加上./系统立马能判定它为非系统参数。对于删除操作<br>，是一个高危操作，任何删除操作，我们应该养成良好的习惯，在删除文件前加上“./”，以防不小<br>心误删除大量无关文件，避免酿成不可预知的损失。</p>
+<pre><code>看了上面两大类操作，虽然都能达到目的，但显然第二种是最言简意赅，最有效率的的！我们
+</code></pre><p>之所以刚开始没有删除，就是平时没有养成一个良好的操作习惯。至于为何没有删除，显然是系统<br>无法识别，很自然的把它当作命令参数，而加上./系统立马能判定它为非系统参数。对于删除操作<br>，是一个高危操作，任何删除操作，我们应该养成良好的习惯，在删除文件前加上“./”，以防不小<br>心误删除大量无关文件，避免酿成不可预知的损失。</p>
 
       
     </div>
